@@ -1022,3 +1022,77 @@
 .form-submit button:hover {
     background-color: var(--primary-600);
 }
+
+/* Extension of Company Section */
+.extension-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.extension-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .extension-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+}
+
+.extension-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--neutral-100);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-400);
+    font-weight: 600;
+    border: 2px dashed var(--neutral-200);
+}
+
+.extension-image-placeholder::after {
+    content: 'Imagen del Equipo / Oficina';
+}
+
+.extension-content h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.extension-text {
+    font-size: 1.1rem;
+    color: var(--neutral-500);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.extension-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.extension-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--color-text-body);
+}
+
+.extension-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-secondary-on-light);
+    font-weight: 800;
+}
