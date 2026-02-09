@@ -95,4 +95,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Expectation Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    if (accordionHeaders.length > 0) {
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = item.querySelector('.accordion-content');
+                const isActive = item.classList.contains('active');
+
+                // Close other open items (Exclusive Accordion)
+                document.querySelectorAll('.accordion-item.active').forEach(activeItem => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                        activeItem.querySelector('.accordion-content').style.maxHeight = null;
+                        activeItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle clicked item
+                if (isActive) {
+                    item.classList.remove('active');
+                    content.style.maxHeight = null;
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    }
 });
