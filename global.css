@@ -1,0 +1,166 @@
+/* Global CSS: Variables, Resets, Typography */
+/* Fonts: Open Sans (Headings), Roboto (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    /* 
+       COLOR PALETTE SYSTEM 
+       Primary: #01263D (Deep Blue) - Used for 30% (Structuring, Text, Headers)
+       Secondary: #C1D789 (Soft Lime) - Used for 10% (Accents, CTAs)
+       Neutral: White/Grays - Used for 60% (Backgrounds, Negative Space)
+    */
+
+    /* Primary Scale (Deep Blue) */
+    --primary-100: #E0E9F0;
+    --primary-200: #B3C6D6;
+    --primary-300: #80A0B8;
+    --primary-400: #4D7999;
+    --primary-500: #01263D;
+    /* Accessibile on White (AAA) */
+    --primary-600: #011F32;
+    --primary-700: #011826;
+    --primary-800: #00101A;
+    --primary-900: #00080D;
+
+    /* Secondary Scale (Soft Lime) */
+    --secondary-100: #F3F8E7;
+    --secondary-200: #E5EFCC;
+    --secondary-300: #D6E6B0;
+    --secondary-400: #C9DE96;
+    --secondary-500: #C1D789;
+    /* Needs Dark Text for Contrast */
+    --secondary-600: #AABD74;
+    --secondary-700: #93A360;
+    --secondary-800: #7C8A4D;
+    --secondary-900: #65703A;
+
+    /* Neutrals / Structure (The 60%) */
+    --neutral-50: #FFFFFF;
+    --neutral-100: #F8FAFC;
+    --neutral-200: #E2E8F0;
+    --neutral-300: #CBD5E1;
+    --neutral-400: #94A3B8;
+    --neutral-500: #64748B;
+    --neutral-800: #1E293B;
+    --neutral-900: #0F172A;
+
+    /* Semantic Aliases */
+    --color-bg-body: var(--neutral-50);
+    --color-bg-alt: var(--neutral-100);
+
+    --color-text-main: var(--primary-500);
+    /* #01263D on White = 15.6:1 (AAA) */
+    --color-text-body: var(--neutral-500);
+    /* #64748B on White = 5.2:1 (AA) */
+    --color-text-inverse: var(--neutral-50);
+    --color-text-on-secondary: var(--primary-900);
+    /* Dark text on Lime green for AAA */
+
+    --color-primary: var(--primary-500);
+    --color-secondary: var(--secondary-500);
+    --color-border: var(--neutral-200);
+
+    /* Gradients */
+    --gradient-corporate: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-400) 100%);
+    --gradient-growth: linear-gradient(135deg, var(--primary-500) 0%, var(--secondary-600) 100%);
+    --gradient-warm: linear-gradient(to right, var(--secondary-500), var(--secondary-300));
+
+    /* Typography */
+    --font-heading: 'Open Sans', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+
+    /* UI Elements */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --shadow-sm: 0 1px 2px 0 rgb(1 38 61 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(1 38 61 / 0.1);
+}
+
+/* Base Reset & Typography */
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-body);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-main);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 var(--space-sm) 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--primary-400);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--secondary-600);
+}
+
+/* Utility Classes for 60-30-10 Rule */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-on-secondary);
+}
+
+.bg-gradient-1 {
+    background: var(--gradient-corporate);
+    color: white;
+}
+
+.bg-gradient-2 {
+    background: var(--gradient-growth);
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}

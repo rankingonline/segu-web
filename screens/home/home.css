@@ -1,0 +1,414 @@
+/* screens/home/home.css */
+
+/* --- Layout --- */
+
+.site-header {
+    background: var(--color-surface);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.logo .dot {
+    color: var(--color-accent);
+}
+
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.desktop-nav a {
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.desktop-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    /* Slightly rounded edges for modern but professional look */
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-primary:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-white {
+    background: var(--color-surface);
+    color: var(--color-primary);
+}
+
+.btn-white:hover {
+    background: var(--color-accent);
+    color: var(--color-surface);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-primary);
+    /* Fallback */
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1a2538 100%);
+    color: var(--color-surface);
+    padding: var(--space-2xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero h1 {
+    color: var(--color-surface);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+}
+
+.hero .highlight {
+    color: var(--color-accent);
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    /* Light slate */
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.hero-visual {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    /* Placeholder height */
+    background: rgba(255, 255, 255, 0.05);
+    /* Placeholder glass look */
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+/* Services */
+.section-padding {
+    padding: var(--space-2xl) 0;
+}
+
+.section-header {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.service-card {
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* About Section */
+.bg-light {
+    background-color: #F1F5F9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.check-list {
+    list-style: none;
+    margin-top: var(--space-md);
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* CTA */
+.cta-section {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    text-align: center;
+}
+
+.cta-box h2,
+.cta-box p {
+    color: var(--color-surface);
+}
+
+/* Override global */
+
+/* Footer */
+.site-footer {
+    background: var(--color-primary);
+    color: #94a3b8;
+    padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.footer-brand .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-surface);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--space-xs);
+}
+
+.footer-links a {
+    color: #94a3b8;
+}
+
+.footer-links a:hover {
+    color: var(--color-surface);
+}
+
+.footer-contact h4,
+.footer-links h4 {
+    color: var(--color-surface);
+    font-family: var(--font-body);
+    margin-bottom: var(--space-md);
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: var(--space-lg);
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Responsive / Mobile Menu */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .desktop-nav {
+        display: none;
+        /* Hidden by default */
+        width: 100%;
+        order: 3;
+        margin-top: var(--space-md);
+        background: var(--color-surface);
+        padding: var(--space-md);
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        border-radius: 0 0 8px 8px;
+    }
+
+    .desktop-nav.active {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .desktop-nav ul {
+        flex-direction: column;
+        align-items: center;
+        /* Center links on mobile for better touch targets */
+        gap: var(--space-md);
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: var(--space-lg);
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-text {
+        margin-bottom: var(--space-lg);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        margin-bottom: var(--space-md);
+    }
+}
+
+/* Mobile Button Styles */
+.mobile-menu-btn {
+    display: none;
+    /* Visible only on mobile via media query */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    z-index: 101;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-primary);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Hamburger to X Transformation */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
