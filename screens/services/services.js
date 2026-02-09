@@ -1,56 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle Logic
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.desktop-nav');
-
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent bubbling issues
-            nav.classList.toggle('active');
-            menuBtn.classList.toggle('active');
-
-            const isExpanded = nav.classList.contains('active');
-            menuBtn.setAttribute('aria-expanded', isExpanded);
-
-            // Lock body scroll when menu is open
-            document.body.style.overflow = isExpanded ? 'hidden' : '';
-        });
-    }
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (nav && nav.classList.contains('active') && !nav.contains(e.target) && !menuBtn.contains(e.target)) {
-            nav.classList.remove('active');
-            menuBtn.classList.remove('active');
-            menuBtn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Mobile Dropdown Toggle
-    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger, .chevron');
-    dropdownTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-
-            if (isMobile) {
-                e.preventDefault(); // Always prevent default on mobile
-                e.stopPropagation();
-
-                const parent = trigger.closest('.dropdown-item');
-
-                if (parent) {
-                    // Close other open dropdowns (optional, but good UX)
-                    document.querySelectorAll('.dropdown-item.active').forEach(item => {
-                        if (item !== parent) item.classList.remove('active');
-                    });
-
-                    parent.classList.toggle('active');
-                }
-            }
-        });
-    });
-
     // Fade-in animation for service cards
     const observerOptions = {
         threshold: 0.1,
@@ -83,18 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Header Scroll Effect
-    const header = document.querySelector('.site-header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
 
     // Expectation Accordion Logic
     const accordionHeaders = document.querySelectorAll('.accordion-header');
