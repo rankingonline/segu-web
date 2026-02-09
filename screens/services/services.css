@@ -1,0 +1,461 @@
+/* screens/services/services.css */
+
+/* Reuse Header/Footer styles from global or home if not broken out. 
+   Ideally, common component styles should be in global.css, but for now 
+   we will assume basic global classes handle most things and add specific overrides here.
+*/
+
+/* Page Header */
+.page-header {
+    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1a2538 100%);
+    color: var(--color-surface);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--color-surface);
+    margin-bottom: var(--space-md);
+    font-size: 3.5rem;
+}
+
+.page-header .highlight {
+    color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+
+/* Header Override for Sticky */
+/* Header Override for Sticky */
+.site-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    padding: var(--space-sm) 0;
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    height: 102px;
+    width: auto;
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+.site-header.scrolled .header-logo {
+    height: 50px;
+}
+
+/* Navigation */
+/* Navigation */
+.desktop-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 var(--space-lg);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list>li>a {
+    color: var(--color-accent);
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    position: relative;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 100px;
+}
+
+.nav-list>li>a:hover {
+    color: var(--color-primary);
+    background-color: rgba(1, 38, 61, 0.05);
+}
+
+.nav-list>li>a.active {
+    background-color: var(--primary-500);
+    color: white;
+    box-shadow: 0 4px 10px rgba(1, 38, 61, 0.2);
+    font-weight: 600;
+    transform: translateY(-1px);
+}
+
+/* Remove old underline effect */
+.nav-list>li>a::after {
+    display: none;
+}
+
+/* Mega Menu / Dropdown */
+.dropdown-item {
+    position: relative;
+}
+
+.chevron {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropdown-item:hover .chevron {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: white;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    min-width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+    border: 1px solid var(--neutral-200);
+}
+
+.dropdown-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.dropdown-column h3 {
+    font-size: 1rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--neutral-100);
+    padding-bottom: var(--space-xs);
+}
+
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-column ul li {
+    margin-bottom: 10px;
+}
+
+.dropdown-column ul li a {
+    color: var(--color-text-main);
+    font-size: 0.95rem;
+    display: block;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-column ul li a:hover {
+    background: var(--neutral-100);
+    color: var(--color-primary);
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* CTA - High Presence */
+.cta-btn {
+    background-color: var(--color-primary);
+    color: var(--color-secondary-on-dark);
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(1, 38, 61, 0.25);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    letter-spacing: 0.02em;
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-600);
+    color: var(--color-secondary-on-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(1, 38, 61, 0.3);
+}
+
+.cta-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.mobile-menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+
+    /* Remove potential containing block creators on header to allow fixed child to cover screen */
+    .site-header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transform: none;
+        /* Removed translateZ to let fixed children relate to viewport */
+        background: white;
+        z-index: 1000;
+        position: sticky;
+    }
+
+    .header-content {
+        justify-content: space-between;
+        padding: 0 var(--space-sm);
+    }
+
+    .header-logo {
+        height: 70px;
+        /* Bigger logo as requested */
+    }
+
+    .site-header.scrolled .header-logo {
+        height: 55px;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        position: relative;
+        z-index: 10002;
+        /* Very high z-index */
+        width: 48px;
+        /* Larger touch target */
+        height: 48px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    /* Move CTA inside menu or hide if needed, but usually we want it visible */
+    /* For this design, let's keep CTA visible in header but smaller, or move to menu */
+    .cta-btn {
+        display: none;
+        /* Hide desktop CTA */
+    }
+
+    .desktop-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        background: white;
+        padding: 110px 24px 40px;
+        /* Content starts below header */
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        /* Below the header (1000) so button remains clickable */
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: none;
+    }
+
+    .desktop-nav.active {
+        transform: translateX(0);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-list>li {
+        width: 100%;
+        border-bottom: 1px solid var(--neutral-100);
+    }
+
+    .nav-list>li>a {
+        padding: 1.25rem 0;
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: space-between;
+        background: transparent !important;
+        /* Override pill style */
+        color: var(--color-text-main) !important;
+        box-shadow: none !important;
+        border-radius: 0;
+    }
+
+    .nav-list>li>a:hover {
+        color: var(--color-primary) !important;
+    }
+
+    /* Mobile Dropdown */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        min-width: unset;
+        display: none;
+        /* Hidden by default, toggled via JS */
+        border: none;
+        background: var(--neutral-50);
+        margin: 0;
+        border-radius: 0;
+        border-top: 1px solid var(--neutral-100);
+    }
+
+    /* Show dropdown when active class is added to parent li */
+    .dropdown-item.active .dropdown-menu {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        padding: var(--space-md) 0;
+    }
+
+    .dropdown-column h3 {
+        color: var(--color-primary);
+        font-size: 0.9rem;
+        margin-top: var(--space-sm);
+    }
+
+    .dropdown-column ul li a {
+        padding-left: 0;
+        font-size: 1rem;
+        color: var(--neutral-500);
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Ensure chevron doesn't block clicks but lets parent handle them */
+    .chevron {
+        pointer-events: none;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Add Mobile CTA inside menu */
+    .desktop-nav::after {
+        content: 'Contactar';
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        background: var(--primary-500);
+        color: var(--color-secondary-on-dark);
+        font-weight: 700;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+}

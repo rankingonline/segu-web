@@ -57,7 +57,15 @@
     /* Dark text on Lime green for AAA */
 
     --color-primary: var(--primary-500);
-    --color-secondary: var(--secondary-500);
+
+    /* Contextual Secondary Colors */
+    --color-secondary-on-light: var(--secondary-700);
+    /* Darker for contrast on white */
+    --color-secondary-on-dark: var(--secondary-500);
+    /* Lighter for pop on dark */
+
+    /* Default to 'On Light' since body is light */
+    --color-secondary: var(--color-secondary-on-light);
     --color-border: var(--neutral-200);
 
     /* Gradients */
@@ -80,11 +88,44 @@
     /* UI Elements */
     --radius-sm: 4px;
     --radius-md: 8px;
+    --radius-lg: 16px;
     --shadow-sm: 0 1px 2px 0 rgb(1 38 61 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(1 38 61 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(1 38 61 / 0.1), 0 4px 6px -2px rgb(1 38 61 / 0.05);
+
+    /* Animation */
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Compatibility Aliases for Components */
+    --color-surface: var(--neutral-50);
+    --color-accent: var(--color-secondary);
+    /* Follows secondary context */
+}
+
+/* Context Overrides for Dark Backgrounds */
+.bg-primary,
+.bg-gradient-1,
+.scheme-dark {
+    --color-secondary: var(--color-secondary-on-dark);
+    --color-accent: var(--color-secondary-on-dark);
+    --color-text-main: var(--neutral-50);
+    --color-text-body: var(--neutral-300);
 }
 
 /* Base Reset & Typography */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--color-bg-body);
     color: var(--color-text-body);
