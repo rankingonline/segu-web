@@ -24,11 +24,142 @@
     color: var(--color-accent);
 }
 
-.subtitle {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    max-width: 700px;
+/* Hero Refinements for Structured Content */
+.hero-content {
+    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-intro {
+    font-size: 1.35rem;
+    color: #e2e8f0;
+    font-weight: 500;
+    line-height: 1.5;
+    grid-area: intro;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.hero-values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-values-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-values-list li::before {
+    content: '✓';
+    font-weight: bold;
+}
+
+.experience-text {
+    font-size: 1rem;
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+/* Specific Hero CTA override for contrast */
+.hero-content .hero-cta {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    grid-area: cta;
+}
+
+.hero-content .hero-cta:hover {
+    background-color: white;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Desktop Grid Layout for Hero */
+@media (min-width: 900px) {
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title details"
+            "intro details"
+            "cta details";
+        gap: 1.5rem 4rem;
+        align-items: start;
+        text-align: left;
+        max-width: 1100px;
+    }
+
+    .hero-content h1 {
+        grid-area: title;
+        text-align: left;
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-bottom: 0;
+    }
+
+    .hero-intro {
+        text-align: left;
+        font-size: 1.35rem;
+        /* Adjusted back to manageable size */
+        margin-bottom: 0;
+    }
+
+    .hero-text-block {
+        grid-area: details;
+        align-items: flex-start;
+        margin: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        /* Subtle separator */
+        padding-left: 3rem;
+        text-align: left;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .hero-values-list {
+        justify-content: flex-start;
+    }
+
+    .hero-cta {
+        display: inline-block;
+        justify-self: start;
+        align-self: start;
+        margin-top: 0;
+    }
 }
 
 
@@ -151,7 +282,9 @@
     box-shadow: var(--shadow-lg);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
-    min-width: 600px;
+    padding-bottom: 3rem;
+    /* Extra space to prevent bottom clip */
+    min-width: 700px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-out;
