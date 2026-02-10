@@ -10,7 +10,8 @@
     background-color: white;
     /* Clean white bg */
     position: relative;
-    padding: 120px 0 80px;
+    padding: 200px 0 80px;
+    /* Increased top padding for fixed header */
     text-align: center;
     overflow: hidden;
 }
@@ -189,15 +190,10 @@
     max-width: 600px;
 }
 
-/* Specific Hero CTA override for contrast */
-.hero-content .hero-cta {
+/* Shared Primary Button Style (Hero, Extension, Location) */
+.btn-primary {
     background-color: var(--color-primary);
     color: white;
-    /* Standard primary button style */
-    margin-top: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: none;
-    grid-area: cta;
     padding: 1rem 2.5rem;
     border-radius: 8px;
     /* Slightly rounded corners */
@@ -206,13 +202,21 @@
     display: inline-block;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content .hero-cta:hover {
+.btn-primary:hover {
     background-color: var(--primary-600);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Specific Adjustments */
+.hero-content .hero-cta {
+    margin-top: 1rem;
+    grid-area: cta;
 }
 
 /* Desktop Grid Layout for Hero */
@@ -273,8 +277,9 @@
 
 /* New Header Styles */
 .site-header-wrapper {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
     width: 100%;
     background: white;
@@ -813,7 +818,7 @@
 
 .contact-info h2 {
     font-size: 2.5rem;
-    color: white;
+    color: var(--secondary-500);
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -1178,18 +1183,31 @@
     margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
-.location-details p {
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    /* Align to top for multi-line addresses */
+    gap: 0.75rem;
     font-size: 1.05rem;
     color: var(--color-text-body);
     margin: 0;
+    line-height: 1.5;
 }
 
-.location-details strong {
-    color: var(--color-primary);
-    font-weight: 700;
+.location-item svg {
+    color: var(--secondary-800);
+    flex-shrink: 0;
+    margin-top: 3px;
+    /* Visual alignment with text */
+}
+
+.location-item a {
+    color: var(--color-text-body);
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .location-details a {
