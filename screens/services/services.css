@@ -192,8 +192,8 @@
 
 /* Shared Primary Button Style (Hero, Extension, Location) */
 .btn-primary {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: var(--secondary-500);
+    color: var(--color-primary);
     padding: 1rem 2.5rem;
     border-radius: 8px;
     /* Slightly rounded corners */
@@ -944,7 +944,8 @@
 }
 
 .form-submit button:hover {
-    background-color: var(--secondary-400);
+    background-color: var(--primary-500);
+    color: var(--secondary-400);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -1282,6 +1283,7 @@
     line-height: 1.6;
     color: var(--neutral-600);
 }
+
 /* Footer Styles */
 .site-footer {
     display: flex;
@@ -1290,7 +1292,8 @@
 
 /* Footer Top (Dark Blue) */
 .footer-top {
-    background-color: var(--color-primary); /* #01263D */
+    background-color: var(--color-primary);
+    /* #01263D */
     color: white;
     padding: 5rem 0 4rem;
 }
@@ -1331,14 +1334,17 @@
 .footer-desc {
     font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--primary-100); /* Lighter blue/grey for text on dark */
+    color: var(--primary-100);
+    /* Lighter blue/grey for text on dark */
     margin-bottom: 1rem;
 }
 
 .footer-cta.btn-outline-white {
     background: transparent;
-    border: 1px solid var(--secondary-500); /* Use lime border for outline */
-    color: var(--secondary-500); /* Lime text */
+    border: 1px solid var(--secondary-500);
+    /* Use lime border for outline */
+    color: var(--secondary-500);
+    /* Lime text */
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
     display: inline-block;
@@ -1382,7 +1388,8 @@
 }
 
 .footer-contact-list li svg {
-    color: var(--secondary-500); /* Lime icons */
+    color: var(--secondary-500);
+    /* Lime icons */
     flex-shrink: 0;
     margin-top: 3px;
 }
@@ -1401,7 +1408,8 @@
 
 /* Footer Bottom (Light Bar) */
 .footer-bottom {
-    background-color: var(--secondary-100); /* Light beige/green */
+    background-color: var(--secondary-100);
+    /* Light beige/green */
     padding: 1.5rem 0;
     font-size: 0.85rem;
     color: var(--neutral-500);
@@ -1422,7 +1430,8 @@
 }
 
 .footer-legal a {
-    color: var(--color-primary); /* Dark text for links on light bg */
+    color: var(--color-primary);
+    /* Dark text for links on light bg */
     text-decoration: none;
     font-weight: 600;
 }
@@ -1439,18 +1448,20 @@
 /* Responsive Grid */
 @media (min-width: 900px) {
     .footer-grid {
-        grid-template-columns: 4fr 3fr 2fr; /* Ratio to give brand col more space */
+        grid-template-columns: 4fr 3fr 2fr;
+        /* Ratio to give brand col more space */
         gap: 4rem;
     }
 
     .bottom-content {
-        flex-direction: row-reverse; /* Copyright left, links right? Or as designed */
-        justify-content: space-between; /* Links right, Copyright left */
+        flex-direction: row-reverse;
+        /* Copyright left, links right? Or as designed */
+        justify-content: space-between;
+        /* Links right, Copyright left */
     }
-    
+
     /* If the design has Legal links on the left and copyright on the right, swap order in HTML or use row-reverse safely */
     /* The design image shows: [Policy Links] [Copyright] (centered? no, spaced) */
     /* Wait, the image shows: "Política de privacidad..." on the left? No, looks centered or spread. */
     /* Standard: Copyright Left, Links Right. Or vice-versa. Let's stick to standard flow */
 }
-
