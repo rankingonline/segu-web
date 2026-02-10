@@ -519,20 +519,45 @@
 }
 
 .service-card {
-    background: #f8fafc;
-    /* Slight off-white for contrast against white bg */
+    background: var(--secondary-100);
+    /* Light green background */
     padding: 3rem 2.5rem;
     border-radius: 20px;
     box-shadow: none;
-    /* Flat by default */
-    border: 1px solid #e2e8f0;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid transparent;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient Overlay Animation */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-hover-card);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card h3,
+.service-card p,
+.service-card .card-cta {
+    position: relative;
+    z-index: 2;
 }
 
 .service-card h3 {
@@ -545,11 +570,9 @@
 
 /* Stylish Hover Effect: Lift, Glow, and Shadow */
 .service-card:hover {
-    background: #ffffff;
     transform: translateY(-6px);
     box-shadow: 0 20px 40px -5px rgba(1, 38, 61, 0.15), 0 10px 20px -5px rgba(1, 38, 61, 0.04);
-    border-color: var(--color-primary);
-    /* Primary border reveal */
+    border-color: transparent;
 }
 
 .service-card p {
@@ -580,7 +603,7 @@
 
 .service-card:hover .card-cta .arrow {
     transform: translateX(6px);
-    color: var(--secondary-600);
+    color: var(--color-primary);
 }
 
 .service-card h3 {
@@ -618,7 +641,7 @@
     margin: 0 auto;
     font-size: 1.35rem;
     color: var(--color-primary);
-    padding: 3rem;
+    padding: 0rem 3rem;
     background: var(--neutral-50);
     /* Subtle bg for closing block */
     border-radius: var(--radius-lg);

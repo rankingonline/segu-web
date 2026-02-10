@@ -72,6 +72,7 @@
     --gradient-corporate: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-400) 100%);
     --gradient-growth: linear-gradient(135deg, var(--primary-500) 0%, var(--secondary-600) 100%);
     --gradient-warm: linear-gradient(to right, var(--secondary-500), var(--secondary-300));
+    --gradient-hover-card: linear-gradient(135deg, #CCFBDD 0%, #E4FDB9 100%);
 
     /* Typography */
     --font-heading: 'Open Sans', sans-serif;
