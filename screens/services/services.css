@@ -48,7 +48,7 @@
 .blob-2 {
     width: 400px;
     height: 400px;
-    background: var(--secondary-500);
+    background: var(--secondary-300);
     /* Mid lime */
     bottom: -50px;
     right: -50px;
@@ -651,7 +651,7 @@
 /* Expectations Section */
 .expectations-section {
     padding: 5rem 0;
-    background-color: var(--neutral-100);
+    background-color: var(--secondary-100);
 }
 
 .expectations-layout {
@@ -702,7 +702,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background: white;
+    background: var(--gradient-hover-card);
     border: none;
     cursor: pointer;
     text-align: left;
@@ -732,7 +732,7 @@
 .accordion-icon::after {
     content: '';
     position: absolute;
-    background-color: var(--color-primary);
+    background-color: var(--secondary-500);
     transition: transform 0.3s ease;
     border-radius: 2px;
 }
