@@ -585,8 +585,12 @@
 
 .card-cta {
     color: var(--color-primary);
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -594,6 +598,14 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    width: fit-content;
+}
+
+.card-cta:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(1, 38, 61, 0.1);
 }
 
 .card-cta .arrow {
@@ -602,8 +614,9 @@
 }
 
 .service-card:hover .card-cta .arrow {
-    transform: translateX(6px);
-    color: var(--color-primary);
+    transform: translateX(4px);
+    color: inherit;
+    /* Inherit white on hover */
 }
 
 .service-card h3 {
@@ -832,7 +845,8 @@
 }
 
 .contact-form-wrapper {
-    background: white;
+    background: linear-gradient(145deg, #ffffff 0%, var(--secondary-100) 100%);
+    /* Subtle gradient */
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -865,7 +879,8 @@
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.2s;
-    background-color: var(--neutral-50);
+    background-color: white;
+    /* Ensure inputs stay readable */
     width: 100%;
 }
 
@@ -914,15 +929,19 @@
     margin-top: 0.5rem;
     cursor: pointer;
     border: none;
-    background-color: var(--color-primary);
-    color: white;
-    transition: background-color 0.3s ease;
-    border-radius: 50px;
+    background-color: var(--secondary-600);
+    color: var(--primary-900);
+    /* Dark text on lime */
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    /* Straight but rounded */
     font-weight: 700;
 }
 
 .form-submit button:hover {
-    background-color: var(--primary-600);
+    background-color: var(--secondary-400);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Extension of Company Section */
