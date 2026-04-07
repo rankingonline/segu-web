@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Servicios Legales y de Gestión - Segú. Asesoría integral para empresas y particulares.">
+    <title>Segú | Gestión Administrativa</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./gestion-administrativa.css">
+
+    <!-- Favicon (placeholder) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>S</text></svg>">
+</head>
+
+<body>
+    <!-- Header Container -->
+    <header class="site-header-wrapper">
+        <!-- Top Bar -->
+        <div class="top-header">
+            <div class="container top-header-content">
+                <!-- Left: Contact & Social -->
+                <div class="top-left">
+                    <a href="tel:932688621" class="top-contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        932 688 621
+                    </a>
+                    <span class="divider">|</span>
+                    <a href="#" class="top-social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+
+                <!-- Right: Actions & Partner Logo -->
+                <div class="top-right">
+                    <div class="portal-buttons">
+                        <a href="#" class="btn btn-sm btn-portal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Portal cliente
+                        </a>
+                        <a href="#" class="btn btn-sm btn-portal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Portal empleado
+                        </a>
+                    </div>
+
+                    <a href="#" class="link-subvenciones">
+                        Subvenciones
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+
+                    <span class="divider">|</span>
+
+                    <img src="../../assets/logo/logo-ivstime.png" alt="IusTime" class="partner-logo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="container main-header-content">
+                <!-- Logo -->
+                <a href="../home/home.html" class="logo-link">
+                    <img src="../../assets/logo/logo.png" alt="Segú Assessors" class="main-logo">
+                </a>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="../home/home.html">Inicio</a></li>
+                        <li><a href="../home/home.html#nosotros">Nosotros</a></li>
+                        <li class="has-dropdown">
+                            <a href="./services.html" class="active">
+                                Servicios
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">
+                                Actualidad
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </nav>
+
+                <!-- CTA -->
+                <div class="header-cta">
+                    <a href="#contacto" class="btn btn-ghost-primary">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header hero-section">
+            <!-- Animated Background -->
+            <div class="hero-animated-bg">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+
+            <div class="container relative-content">
+                <div class="hero-content">
+                    <h1>Asesoría administrativa en Barcelona: trámites al día y control sin sobresaltos</h1>
+
+                    <a href="#contacto" class="btn btn-primary cta-btn hero-cta">Solicitar revisión administrativa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información Administrativa -->
+        <section class="admin-info-section" style="padding: 5rem 0; background-color: var(--neutral-50);">
+            <div class="container">
+                <div class="extension-grid">
+                    <!-- Imagen a la izquierda -->
+                    <div class="extension-image-col">
+                        <div class="extension-image-placeholder"
+                            style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center; border: none; height: 100%; min-height: 400px; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+
+                    <!-- Contenido a la derecha -->
+                    <div class="extension-content"
+                        style="display: flex; flex-direction: column; justify-content: center;">
+                        <p class="extension-text"
+                            style="font-size: 1.25rem; color: var(--color-primary); font-weight: 500; line-height: 1.6;">
+                            La <strong style="color: var(--secondary-700);">gestión administrativa</strong> es la base
+                            que garantiza el buen funcionamiento de cualquier empresa.
+                        </p>
+
+                        <p class="extension-text" style="font-size: 1.1rem; line-height: 1.7; margin-top: 1.5rem;">
+                            Nos encargamos de todos los trámites frente a la Administración, desde autorizaciones,
+                            certificados y registros oficiales hasta el control de notificaciones electrónicas y
+                            certificados digitales. <strong>Gestionamos fianzas, apoderamientos y coordinación de plazos
+                                clave</strong>, asegurando cumplimiento, transparencia y seguridad jurídica.
+                        </p>
+
+                        <p class="extension-text" style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">
+                            Nuestro servicio de gestión administrativa permite que nuestros clientes se concentren en su
+                            actividad, con la tranquilidad de que todos los procesos administrativos se realizan de
+                            manera eficiente y sin contratiempos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services List Section -->
+        <section class="services-list-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Nuestros servicios de gestoría administrativa en Barcelona</h2>
+                    <p>Desde la tramitación de certificados hasta el control de notificaciones: <span
+                            class="text-highlight">nos encargamos de todo</span> para que su empresa cumpla con sus
+                        obligaciones administrativas.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Card 1 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Autorizaciones y certificados</h3>
+                        <p>Tramitamos solicitudes ante organismos públicos, seguimiento del expediente y entrega de
+                            documentación en forma y plazo.</p>
+                        <a href="#" class="card-cta">Consultar trámite <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Obtención, renovación y control de caducidad de certificados digitales</h3>
+                        <p>Gestionamos certificados, renovaciones y control de vencimientos para evitar bloqueos por
+                            caducidad.</p>
+                        <a href="#" class="card-cta">Revisar certificados digitales <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Consulta periódica de notificaciones electrónicas</h3>
+                        <p>Revisamos notificaciones y avisos en sedes electrónicas para que no se pierdan plazos ni
+                            requerimientos.</p>
+                        <a href="#" class="card-cta">Activar control de notificaciones <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Depósito y devolución de fianzas de alquiler</h3>
+                        <p>Gestionamos depósito, devolución y seguimiento de fianzas, con comprobación de documentación
+                            y plazos.</p>
+                        <a href="#" class="card-cta">Gestionar fianza <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Apoderamientos oficiales de representación</h3>
+                        <p>Tramitamos apoderamientos y autorizaciones para actuar ante la Administración en nombre de su
+                            empresa.</p>
+                        <a href="#" class="card-cta">Solicitar apoderamiento <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Solicitud y control de días de cortesía AEAT</h3>
+                        <p>Configuramos y controlamos los días de cortesía para planificar notificaciones y evitar
+                            plazos inesperados.</p>
+                        <a href="#" class="card-cta">Solicitar días de cortesía <span class="arrow">→</span></a>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="service-card service-detail-card">
+                        <h3>Inscripción y renovación de registros</h3>
+                        <p>Inscripciones, renovaciones y control documental en registros oficiales según su actividad o
+                            sector.</p>
+                        <a href="#" class="card-cta">Consultar registro <span class="arrow">→</span></a>
+                    </article>
+                </div>
+
+                <div class="section-closing">
+                    <p>¿Necesita <span class="text-highlight">apoyo legal en temas mercantiles, fiscales o
+                            laborales</span>? Nuestro equipo jurídico puede complementar cualquier servicio de asesoría
+                        con una cobertura legal completa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Left Column: Info & Image -->
+                    <div class="contact-info">
+                        <h2>Hablemos sobre su gestión administrativa y sus trámites pendientes</h2>
+                        <p>Déjenos sus datos y un asesor especializado contactará con usted en menos de 24h.</p>
+                        <div class="contact-image-placeholder">
+                            <!-- Placeholder for Image -->
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form">
+                            <div class="form-stack">
+                                <div class="form-group">
+                                    <label for="name">Nombre completo</label>
+                                    <input type="text" id="name" name="name" placeholder="Su nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        placeholder="Breve descripción de su consulta..."></textarea>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <label for="privacy">He leído y acepto la <a href="#">política de
+                                                privacidad</a>.</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-submit">
+                                    <button type="submit" class="btn btn-primary cta-btn">Enviar consulta</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section class="problems-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Lo que puede salir mal si no cuenta con una gestoría administrativa en Barcelona</h2>
+                    <p>La <strong class="text-highlight">gestión administrativa no suele verse hasta que aparece un
+                            problema</strong>: una notificación que vence, un certificado digital caducado o un trámite
+                        que se bloquea por documentación incompleta. En empresas y despachos, estas incidencias suelen
+                        traducirse en retrasos, plazos perdidos y tiempo invertido en "apagar fuegos".</p>
+                </div>
+
+                <div class="comparison-table">
+                    <!-- Table Header -->
+                    <div class="comparison-header">
+                        <div class="comp-col-bad">
+                            <h3>Situaciones frecuentes</h3>
+                        </div>
+                        <div class="comp-col-good">
+                            <h3>Cómo lo resolvemos desde Segú Assessors</h3>
+                        </div>
+                    </div>
+
+                    <!-- Row 1 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Notificaciones electrónicas que se revisan tarde y vencen los plazos</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Consulta periódica y registro de plazos, con avisos y preparación de respuesta a tiempo
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Certificados digitales caducados o con incidencias de uso</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Obtención, renovación y control de caducidad, con verificación de acceso y firma</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Trámites que se paralizan por documentación incompleta</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Checklist documental previo y seguimiento del expediente hasta su resolución</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Falta de control sobre autorizaciones, licencias o registros necesarios</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Planificación del trámite, presentación en sede y control de renovaciones y vencimientos
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Apoderamientos inexistentes o desactualizados para actuar ante la Administración</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Tramitación de apoderamientos oficiales de representación y control de vigencia</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 6 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Días de cortesía AEAT sin configurar, generando notificaciones en fechas sensibles</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Solicitud y control de días de cortesía AEAT para planificar notificaciones</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 7 -->
+                    <div class="comparison-row">
+                        <div class="comp-col-bad">
+                            <div class="comp-icon bad-icon">✕</div>
+                            <p>Fianzas de alquiler sin depositar o con devoluciones que se retrasan</p>
+                        </div>
+                        <div class="comp-col-good">
+                            <div class="comp-icon good-icon">✓</div>
+                            <p>Depósito y devolución de fianzas de alquiler con control de plazos y justificantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="reviews-header">
+                    <h2>Opiniones sobre nuestra asesoría administrativa en Barcelona</h2>
+                    <p>Muchas empresas nos contactan después de perder plazos, tener notificaciones sin contestar o
+                        sufrir bloqueos por certificados caducados. Con <strong>un sistema de control y
+                            seguimiento</strong>, recuperan orden, visibilidad y tranquilidad en su gestión diaria.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review Card 1 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <img src="https://ui-avatars.com/api/?name=J+G&background=random" alt="User"
+                                class="review-avatar">
+                            <div class="review-meta">
+                                <span class="review-author">Javier García</span>
+                                <span class="review-sub">Local Guide · 14 reseñas</span>
+                            </div>
+                            <!-- Inline Google G Logo -->
+                            <svg class="google-logo-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                <path fill="#EA4335"
+                                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                                <path fill="#4285F4"
+                                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                                <path fill="#FBBC05"
+                                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                                <path fill="#34A853"
+                                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                            </svg>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Excelente servicio. Llevo años trabajando con ellos y la
+                            <strong>tranquilidad</strong> que me dan con mis impuestos es total. Muy recomendables.
+                        </p>
+                        <span class="review-date">Hace un mes</span>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <img src="https://ui-avatars.com/api/?name=M+R&background=random" alt="User"
+                                class="review-avatar">
+                            <div class="review-meta">
+                                <span class="review-author">Marta Rodriguez</span>
+                                <span class="review-sub">5 reseñas</span>
+                            </div>
+                            <!-- Inline Google G Logo -->
+                            <svg class="google-logo-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                <path fill="#EA4335"
+                                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                                <path fill="#4285F4"
+                                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                                <path fill="#FBBC05"
+                                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                                <path fill="#34A853"
+                                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                            </svg>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Me han ayudado muchísimo con la gestión laboral de mi empresa. El equipo
+                            es muy <strong>cercano</strong> y siempre responden rápido a cualquier duda.</p>
+                        <span class="review-date">Hace 3 semanas</span>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <img src="https://ui-avatars.com/api/?name=A+L&background=random" alt="User"
+                                class="review-avatar">
+                            <div class="review-meta">
+                                <span class="review-author">Antonio López</span>
+                                <span class="review-sub">Local Guide · 32 reseñas</span>
+                            </div>
+                            <!-- Inline Google G Logo -->
+                            <svg class="google-logo-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                <path fill="#EA4335"
+                                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                                <path fill="#4285F4"
+                                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                                <path fill="#FBBC05"
+                                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                                <path fill="#34A853"
+                                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                            </svg>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Profesionalidad y <strong>claridad</strong> desde el primer día. Te
+                            explican todo para que lo entiendas. Sin duda la mejor asesoría en Barcelona.</p>
+                        <span class="review-date">Hace 2 meses</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section">
+            <div class="container">
+                <div class="location-layout">
+                    <!-- Text Content -->
+                    <div class="location-info">
+                        <h2>Asesoría administrativa en Barcelona con atención cercana en el Eixample</h2>
+                        <p class="location-desc">Desde nuestra oficina en el Eixample de Barcelona, atendemos <strong>empresas y profesionales que quieren tener sus trámites controlados</strong>, sus notificaciones al día y sus certificados y registros siempre en regla.</p>
+                        <p class="location-desc">Si busca una <strong>asesoría administrativa en Barcelona</strong> que actúe con orden, criterio y seguimiento real, cuéntenos su caso y le indicamos cómo organizar su gestión administrativa sin imprevistos.</p>
+
+                        <div class="location-details">
+                            <p class="location-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Rda. de Sant Pere, 19-21, 2º 1ª – Eixample, 08010 Barcelona</span>
+                            </p>
+                            <p class="location-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                <a href="tel:932688621">932 688 621</a>
+                            </p>
+                            <p class="location-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <a href="mailto:info@seguassessors.com">info@seguassessors.com</a>
+                            </p>
+                        </div>
+
+                        <a href="#contacto" class="btn btn-primary cta-btn">Consultar mi situación administrativa</a>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="location-map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1496.6428832516656!2d2.173892!3d41.3896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4983a1e734457%3A0x8f983fbde15f118f!2sSeg%C3%BA%20Assessors%20Advocats%20i%20Economistes%2C%20SL!5e0!3m2!1ses!2sve!4v1770660585414!5m2!1ses!2sve"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-header">
+                    <h2>Preguntas frecuentes sobre nuestro servicio de gestoría administrativa en Barcelona</h2>
+                </div>
+
+                <div class="faq-accordion-wrapper">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h3>¿Qué incluye una asesoría administrativa en Barcelona para empresas?</h3>
+                            <span class="accordion-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Incluye la gestión de trámites con la Administración, control de notificaciones electrónicas, certificados digitales, registros, autorizaciones y seguimiento de plazos. El objetivo es que la empresa no pierda tiempos ni oportunidades por incidencias administrativas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h3>¿Por qué es importante revisar las notificaciones electrónicas con frecuencia?</h3>
+                            <span class="accordion-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Porque muchas notificaciones tienen plazos de respuesta breves. Si se pasan, puede haber consecuencias: requerimientos no atendidos, pérdida de recursos, recargos o trámites paralizados. Con revisión periódica se evita actuar “a última hora” y se mantiene el control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h3>¿Qué problemas causa un certificado digital caducado?</h3>
+                            <span class="accordion-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Puede impedir firmar trámites, acceder a sedes electrónicas o consultar notificaciones. En el día a día, un certificado caducado puede bloquear gestiones urgentes. Por eso gestionamos renovación y control de caducidad con antelación.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h3>¿Gestionan fianzas de alquiler para empresas?</h3>
+                            <span class="accordion-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Sí. Tramitamos depósito y devolución de fianzas de alquiler, revisando documentación y plazos para que el procedimiento quede correctamente completado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h3>¿Qué son los días de cortesía AEAT y para qué sirven?</h3>
+                            <span class="accordion-icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Son días que se pueden solicitar para que la Agencia Tributaria no ponga notificaciones electrónicas a disposición del contribuyente durante ese periodo. Ayudan a planificar ausencias y a evitar plazos inesperados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col brand-col">
+                        <div class="footer-logos">
+                            <!-- Using white logo filter via CSS for the main logo if needed, or keeping original if it works on dark -->
+                            <img src="../../assets/logo/logo.png" alt="Segú Assessors" class="footer-logo main-logo">
+                            <img src="../../assets/logo/logo-ivstime.png" alt="Iustime"
+                                class="footer-logo ivstime-logo">
+                        </div>
+                        <p class="footer-desc">
+                            Desde el año 1996 prestamos servicios de asesoramiento legal y gestión profesional a un
+                            amplio abanico de clientes.
+                            Somos sinónimo de experiencia, profesionalidad y valor añadido.
+                        </p>
+                        <a href="#contacto" class="btn btn-outline-white footer-cta">Contacta con nosotros</a>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="footer-col contact-col">
+                        <h3>Información de contacto</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                <a href="tel:932688621">932 688 621</a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <a href="mailto:info@seguassessors.com">info@seguassessors.com</a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Rda. de Sant Pere, 19-21, 2º 1ª – Eixample, 08010 Barcelona</span>
+                            </li>
+                            <li class="align-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <div>
+                                    <strong>Horario de atención:</strong>
+                                    <p>Lunes a jueves: 09:00 – 14:00 / 15:00 – 18:00 h</p>
+                                    <p>Viernes: 09:00 – 14:00 h</p>
+                                </div>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <a href="#" target="_blank">Síguenos en LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Services Column -->
+                    <div class="footer-col services-col">
+                        <h3>Servicios</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Asesoría y gestión empresarial</a></li>
+                            <li><a href="#">Servicios jurídicos</a></li>
+                            <li><a href="#">Consultoría y estrategia</a></li>
+                            <li><a href="#">Áreas de especialización</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="bottom-content">
+                    <div class="footer-legal">
+                        <a href="#">Política de privacidad</a>
+                        <a href="#">Aviso legal</a>
+                        <a href="#">Política de cookies</a>
+                    </div>
+                    <p class="copyright">Todos los derechos reservados &copy; 2023 Segú Assessors</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="../../global.js"></script>
+    <script src="./gestion-administrativa.js"></script>
+</body>
+
+</html>
